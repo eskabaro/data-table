@@ -9,6 +9,22 @@
         @include font(400, 16px, $slate-blue);
         padding: 10px 30px;
 
+        &.naming {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        > .user-avatar {
+            background-color: $secondary;
+            width: fit-content;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+        }
+
         &:last-child {
             display: flex;
             justify-content: space-between;

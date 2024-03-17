@@ -2,7 +2,7 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1.5fr 0.4fr;
     border-bottom: 1px solid $secondary;
     height: fit-content;
     padding: 30px;
@@ -61,6 +61,7 @@
     &_btn-box {
         > button {
             @include font(400, 16px, $primary);
+            width: 100%;
             background-color: $royal-periwinkle;
             text-wrap: nowrap;
             display: grid;

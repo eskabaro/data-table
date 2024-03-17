@@ -60,7 +60,15 @@ export const TableItem: FC<ITableItem> = ({
                 [styles.event]: isEvent,
             })}
         >
-            <td>
+            <td className={styles.naming}>
+                <div className={styles["user-avatar"]}>
+                    <img
+                        src="/user-avatar.png"
+                        width={15}
+                        height={15}
+                        alt="user"
+                    />
+                </div>
                 <input
                     {...register("name", { required: true })}
                     readOnly={isReadonly}
