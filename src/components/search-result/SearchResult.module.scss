@@ -1,0 +1,17 @@
+@import "../../index.scss";
+
+.wrapper {
+    display: grid;
+    row-gap: 2px;
+    padding: 30px;
+
+    > h2 {
+        @include font(500, 24px, $slate-blue);
+        line-height: 22px;
+    }
+
+    > span {
+        @include font(400, 16px, $stormy-gray-lite);
+        line-height: 22px;
+    }
+}

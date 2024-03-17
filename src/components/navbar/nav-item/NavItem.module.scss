@@ -1,0 +1,28 @@
+@import "../../../index.scss";
+
+.wrapper {
+    @include font(400, 14px, $stormy-gray-lite);
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 15px;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+    color: $stormy-gray-lite;
+    stroke: $stormy-gray-lite;
+    transition: all 150ms ease-in-out;
+
+    &.active {
+        background-color: $primary;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    &_icon {
+        margin-left: auto;
+    }
+}

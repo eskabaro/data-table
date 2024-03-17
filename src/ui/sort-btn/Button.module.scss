@@ -1,0 +1,19 @@
+@import "../../index.scss";
+
+.button {
+    @include font(400, 14px, $silver-grey);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    > svg {
+        fill: $silver-grey;
+        transition: all 100ms ease-in-out;
+    }
+
+    &.active {
+        > svg {
+            transform: rotate(180deg);
+        }
+    }
+}

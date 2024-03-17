@@ -1,0 +1,44 @@
+@import "../../index.scss";
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 30px;
+
+    &_item {
+        width: 100%;
+        height: 130px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: $pearl-white;
+        transition: all 150ms ease-in-out;
+
+        > h2 {
+            @include font(400, 16px, $stormy-gray-lite);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        > span {
+            @include font(700, 22px, $slate-blue);
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $royal-periwinkle;
+
+                > span,
+                > h2 {
+                    color: $primary;
+
+                    > svg {
+                        fill: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

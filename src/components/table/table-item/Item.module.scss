@@ -1,0 +1,110 @@
+@import "../../../index.scss";
+
+.wrapper {
+    &.event {
+        background-color: $pearl-white;
+    }
+
+    > td {
+        @include font(400, 16px, $slate-blue);
+        padding: 10px 30px;
+
+        &:last-child {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            align-items: center;
+
+            > .services {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                stroke: $stormy-gray-lite;
+
+                > button {
+                    height: 16px;
+                    fill: $stormy-gray-lite;
+                }
+            }
+        }
+
+        > input {
+            @include font(400, 16px, $slate-blue);
+            outline: none;
+            background: transparent;
+            border: 1px solid transparent;
+            transition: all 150ms ease-in-out;
+            padding: 2.5px 5px;
+            border-radius: 5px;
+            margin-left: -5px;
+
+            &.active {
+                border-color: $royal-periwinkle;
+
+                &:focus-within {
+                    -webkit-box-shadow: 0px 0px 0px 4px $Lavender-mist;
+                    -moz-box-shadow: 0px 0px 0px 4px $Lavender-mist;
+                    box-shadow: 0px 0px 0px 4px $Lavender-mist;
+                }
+            }
+        }
+
+        > select {
+            @include font(400, 16px, $slate-blue);
+            opacity: 1;
+            padding: 2.5px 5px;
+            margin-left: -5px;
+            outline: none;
+            background: transparent;
+            border: 1px solid transparent;
+            transition: all 150ms ease-in-out;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            &.active {
+                border-color: $royal-periwinkle;
+                -webkit-appearance: auto;
+                -moz-appearance: auto;
+                appearance: auto;
+
+                &:focus-within {
+                    -webkit-box-shadow: 0px 0px 0px 4px $Lavender-mist;
+                    -moz-box-shadow: 0px 0px 0px 4px $Lavender-mist;
+                    box-shadow: 0px 0px 0px 4px $Lavender-mist;
+                }
+            }
+
+            &:disabled {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.modal-btns-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+
+    > button {
+        @include font(400, 16px, $primary);
+        width: 100%;
+        background-color: $royal-periwinkle;
+        text-wrap: nowrap;
+        display: grid;
+        place-items: center;
+        padding: 13px 20px;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-1px);
+            }
+        }
+    }
+}

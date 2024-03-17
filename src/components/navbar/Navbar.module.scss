@@ -1,0 +1,75 @@
+@import "../../index.scss";
+
+.wrapper {
+    background-color: $secondary;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &_user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-block: 35px;
+
+        &_head {
+            width: 100%;
+
+            > span {
+                @include font(400, 12px, $stormy-gray);
+            }
+
+            > h1 {
+                @include font(500, 18px, $slate-blue);
+            }
+        }
+
+        > button {
+            display: grid;
+            place-items: center;
+            border-radius: 5px;
+            padding: 7px 13px;
+            border: 0.5px solid $light-silver;
+            background-color: $primary;
+            stroke: $stormy-gray-lite;
+            transition: all 150ms ease-in-out;
+
+            @media (hover: hover) {
+                &:hover {
+                    transform: translateY(-1px);
+                }
+            }
+        }
+    }
+
+    &_navigation {
+        padding-bottom: 35px;
+        flex: 1 1 auto;
+
+        > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &_services {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        > button {
+            @include font(400, 14px, $stormy-gray-lite);
+            width: fit-content;
+            display: flex;
+            border-radius: 5px;
+            padding: 10px 15px;
+            align-items: center;
+            text-decoration: none;
+            gap: 15px;
+            color: $stormy-gray-lite;
+            stroke: $stormy-gray-lite;
+            transition: all 150ms ease-in-out;
+        }
+    }
+}
